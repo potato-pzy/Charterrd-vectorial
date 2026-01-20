@@ -1,0 +1,212 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--dark-overlay);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Navigation Header */
+.hero-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-family: "Stage Grotesk", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transition: opacity 0.3s ease;
+}
+
+.nav-menu a:hover {
+    opacity: 0.7;
+}
+
+.btn-outline {
+    display: inline-flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 2px;
+    border: 1px solid #A6F63B;
+    box-shadow: 0 0 4.5px 0 #A6F63B;
+    background: transparent;
+    color: #A6F63B;
+    text-align: center;
+    font-family: "Stage Grotesk", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #A6F63B;
+    color: #000;
+    box-shadow: 0 0 8px 0 #A6F63B;
+}
+
+/* Main Content */
+.hero-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-family: "Stage Grotesk", sans-serif;
+    font-size: 4.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    max-width: 1200px;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
+.hero-subtitle {
+    color: #A6F63B;
+    text-align: center;
+    font-family: "Blauer Nue", sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    padding: 0.45rem 1rem;
+    background: #A6F63B;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 4.5px 0 #A6F63B;
+}
+
+.btn-primary-text {
+    font-size: 1rem !important;
+    font-family: 'Stage Grotesk', sans-serif;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background: #95e52a;
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px 0 #A6F63B;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-nav {
+        padding: 1.5rem;
+    }
+
+    .nav-menu {
+        gap: 1.5rem;
+    }
+
+    .nav-menu a {
+        font-size: 0.75rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        white-space: normal;
+    }
+
+    .hero-subtitle {
+        font-size: 0.75rem;
+    }
+
+    .btn-outline,
+    .btn-primary {
+        font-size: 0.65rem;
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.65rem;
+    }
+}

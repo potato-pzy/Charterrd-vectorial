@@ -1,0 +1,221 @@
+.about-section {
+    background: #0B1418;
+    width: 100%;
+    position: relative;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 800px;
+}
+
+/* Left Column */
+.about-left-column {
+    position: relative;
+    padding: 3rem 6rem 3rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-title {
+    color: #FFFFFF;
+    font-family: "Stage Grotesk", sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0 0 5rem 0;
+    letter-spacing: -0.02em;
+}
+
+.about-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: flex-end;
+}
+
+/* Small Green Image */
+.about-green-image-wrapper {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+.about-green-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Text Content */
+.about-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 440px;
+    margin-bottom: 2rem;
+}
+
+.about-tagline {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Stage Grotesk", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.about-description {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Stage Grotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.about-promise {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Stage Grotesk", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+}
+
+.btn-see-work {
+    display: inline-flex;
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    background: #A6F63B;
+    color: #000000;
+    border: none;
+    font-family: "Stage Grotesk", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-see-work:hover {
+    background: rgba(166, 246, 59, 0.9);
+    transform: translateY(-2px);
+}
+
+/* Right Column - Large Image */
+.about-right-column {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.about-office-image {
+    width: 324px;
+    height: 358px;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .about-left-column {
+        padding: 3rem 4rem;
+    }
+
+    .about-title {
+        font-size: 64px;
+    }
+
+    .about-office-image {
+        width: 100%;
+        height: 100%;
+        max-width: 324px;
+        max-height: 358px;
+    }
+}
+
+@media (max-width: 968px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .about-left-column {
+        padding: 3rem 2rem;
+    }
+
+    .about-title {
+        font-size: 48px;
+        margin-bottom: 3rem;
+    }
+
+    .about-bottom {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    .about-green-image-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-text-content {
+        max-width: 100%;
+    }
+
+    .about-right-column {
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .about-office-image {
+        width: 100%;
+        height: auto;
+        max-width: 324px;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-left-column {
+        padding: 2rem 1.5rem;
+    }
+
+    .about-title {
+        font-size: 36px;
+    }
+
+    .about-tagline {
+        font-size: 16px;
+    }
+
+    .about-description,
+    .about-promise {
+        font-size: 14px;
+    }
+
+    .about-green-image-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about-office-image {
+        max-width: 280px;
+    }
+}

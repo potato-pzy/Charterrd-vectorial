@@ -1,0 +1,269 @@
+.why-section {
+  width: 100%;
+  padding: 80px 0;
+  position: relative;
+  z-index: 1; /* Establish stacking context */
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ambient-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glow-spot-1 {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(0, 110, 65, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(80px);
+}
+
+.glow-spot-2 {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(200, 50, 50, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(100px);
+}
+
+.why-bg-graphic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  /* mix-blend-mode removed to ensure visibility on dark background */
+}
+
+.why-main {
+  width: 100%;
+  max-width: 1280px;
+  position: relative;
+  z-index: 10;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .why-main {
+    padding: 0 32px;
+  }
+}
+
+.why-header {
+  margin-bottom: 80px;
+  text-align: center;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .why-header {
+    margin-bottom: 128px;
+    text-align: left;
+  }
+}
+
+.why-title {
+  font-family: "Stage Grotesk", sans-serif;
+  font-size: 3.75rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: #ffffff;
+  /* max-width: 672px; */
+  margin: 0 auto;
+}
+
+.why-title-break {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .why-title-break {
+    display: block;
+  }
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .why-grid {
+    left: 543px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    width: 65%;
+    position: relative;
+    bottom: 220px;
+  }
+}
+
+.why-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .why-column {
+    gap: 48px;
+  }
+}
+
+.why-column-left {
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .why-column-left {
+    order: 1;
+    margin-top: 96px;
+  }
+}
+
+.why-column-right {
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .why-column-right {
+    order: 2;
+  }
+}
+
+.why-card {
+  position: relative;
+  background: #121212;
+  border-radius: 0.75rem;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 340px;
+  backdrop-filter: blur(2px);
+  transition: background-color 0.5s ease;
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.why-card-production {
+  width: 303px;
+  height: 306px;
+  border-radius: 8px;
+  background: #0C0C0C;
+  border: 1px solid #1E1E1E;
+  background-blend-mode: screen;
+  backdrop-filter: blur(2px);
+  padding: 24px;
+}
+
+.why-card:hover {
+  background: #161616;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.why-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 0.8rem;
+  padding: 1px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.02) 40%, rgba(0, 0, 0, 0.5));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.why-card-production::before {
+  border-radius: 9px;
+  background: linear-gradient(
+    135deg,
+    #1E1E1E 0%,
+    #838383 30%,
+    #000000 60%,
+    #666666 100%
+  );
+}
+
+.why-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.why-card-title {
+  font-family: "Stage Grotesk", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.0em;
+  line-height: 1.25;
+  color: #ffffff;
+  margin: 0;
+}
+
+.why-card-body {
+  font-family: "Stage Grotesk", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.625;
+  color: #C7C7C7;
+  margin: 0;
+}
+
+.why-card-footer {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.why-card-stat {
+  font-family: "Stage Grotesk", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 500;
+  line-height: normal;
+  color: #A6F63B;
+  text-shadow: 0 0 8px rgba(166, 246, 59, 0.3);
+}
+
+.why-card-label {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: normal;
+  color: #00AF66;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 767px) {
+  .why-section {
+    padding: 60px 0;
+  }
+}
