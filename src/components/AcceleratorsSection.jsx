@@ -1,14 +1,14 @@
 import './AcceleratorsSection.css'
 import { useState, useEffect, useRef, useId } from 'react'
+import { Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 
-const salesIcon = 'https://www.figma.com/api/mcp/asset/313c74fc-c793-4543-b5cd-9d6c56890494'
+import salesIcon from '../assets/sales-what.png'
+import docIcon from '../assets/doc-what.png'
+import complianceIcon from '../assets/compliance-what.png'
+
 const salesLine = 'https://www.figma.com/api/mcp/asset/08f7941b-9e4b-4a5b-979e-ba042f443c65'
-
-const docIcon = 'https://www.figma.com/api/mcp/asset/18f1a606-08df-4da8-ab8c-425ff604cd96'
 const docLine = 'https://www.figma.com/api/mcp/asset/f7335f67-86a5-4d14-8ea2-8c191d5287d6'
-
-const complianceIcon = 'https://www.figma.com/api/mcp/asset/199e69c9-b852-46e3-8ae1-69af4fc2ed23'
 const complianceLine = 'https://www.figma.com/api/mcp/asset/2eef0e0a-d4f1-4a0e-a244-dea793b7e265'
 
 const darkCards = [
@@ -308,7 +308,7 @@ function AcceleratorsSection() {
         ))}
       </div>
 
-      <div className="case-hero">
+      <div className="case-hero" id="case-studies">
         <h2>Case Studies</h2>
         <p>
           What happens <span className="highlight">when AI actually ships.</span>

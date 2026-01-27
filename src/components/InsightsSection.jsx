@@ -8,12 +8,12 @@ import article2Image from '../assets/article_2.png';
 import article3Image from '../assets/article_3.jpg';
 
 // CMS-ready data structure
-const defaultCategories = ['ALL', 'AI ENGINEERING', 'AI STRATEGY', 'PHILOSOPHY'];
+const defaultCategories = ['ALL', 'AI ENGINEERING', 'AI STRATEGY', "FOUNDER'S NOTE"];
 
 const defaultFeaturedPost = {
   id: 'featured-1',
   title: "Founder's Note: Why This Firm Exists",
-  date: 'JUL 05, 2024',
+  date: 'JANUARY, 2026',
   slug: '/blog/founders-note',
   backgroundImage: featuredImage
 };
@@ -22,8 +22,9 @@ const defaultArticles = [
   {
     id: 1,
     category: 'AI ENGINEERING',
-    date: 'JUN 12, 2024',
+    date: 'JANUARY, 2026',
     title: 'The Agentic AI Blueprint',
+    displayTitle: <>The Agentic <br /> AI Blueprint</>,
     slug: '/blog/agentic-ai-blueprint',
     gradient: 'linear-gradient(135deg, #008C56 0%, #071920 100%)',
     backgroundImage: article1Image
@@ -31,7 +32,7 @@ const defaultArticles = [
   {
     id: 2,
     category: 'AI STRATEGY',
-    date: 'MAY 24, 2024',
+    date: 'JANUARY, 2026',
     title: 'From Intelligence to Execution: The Rise of Agentic AI',
     slug: '/blog/rise-of-agentic-ai',
     gradient: 'linear-gradient(135deg, #A6D8BF 0%, #000000 100%)',
@@ -39,8 +40,8 @@ const defaultArticles = [
   },
   {
     id: 3,
-    category: 'PHILOSOPHY',
-    date: 'JUL 05, 2024',
+    category: "FOUNDER'S NOTE",
+    date: 'JANUARY, 2026',
     title: "Founder's Note: Why This Firm Exists",
     slug: '/blog/founders-note',
     gradient: 'linear-gradient(135deg, #A4ED3F 0%, #000000 100%)',
@@ -117,6 +118,7 @@ function InsightsSection({
                   category={article.category}
                   date={article.date}
                   title={article.title}
+                  displayTitle={article.displayTitle}
                   slug={article.slug}
                   gradient={article.gradient}
                   backgroundImage={article.backgroundImage}

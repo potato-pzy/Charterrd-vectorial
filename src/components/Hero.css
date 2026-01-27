@@ -9,13 +9,21 @@
     width: 100%;
     min-height: 100vh;
     /* min-height instead of height - allows content to expand */
-    background-image: url('../assets/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     color: var(--text-white);
+    overflow: hidden;
+}
+
+/* Video background - covers entire hero section */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 /* Overlay for better text readability - uses CSS variable */

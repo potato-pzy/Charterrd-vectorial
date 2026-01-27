@@ -9,21 +9,21 @@ const imgRectangle = "https://www.figma.com/api/mcp/asset/b340d30c-5211-456b-8ff
 const imgRectangle1 = "https://www.figma.com/api/mcp/asset/57eded5b-edbe-46db-b87b-8befe08c85ce";
 
 // CMS-ready data structure - can be replaced with CMS data
-const defaultCategories = ['ALL', 'ENGINEERING', 'USECASES', 'FOUNDER\'S NOTES'];
+const defaultCategories = ['ALL', 'AI ENGINEERING', 'USECASES', 'FOUNDER\'S NOTES'];
 
 const defaultFeaturedPost = {
   id: 'featured-1',
   image: imgWkC7AP1,
   title: 'Why most AI pilots never reach production',
-  date: 'JAN 31, 2026',
+  date: 'JANUARY, 2026',
   slug: 'why-most-ai-pilots-never-reach-production',
 };
 
 const defaultArticles = [
   {
     id: 1,
-    category: 'ENGINEERING',
-    date: 'FEB 19, 2026',
+    category: 'AI ENGINEERING',
+    date: 'JANUARY, 2026',
     title: 'Automating compliance checks in regulated environments',
     image: null,
     slug: 'automating-compliance-checks',
@@ -32,7 +32,7 @@ const defaultArticles = [
   {
     id: 2,
     category: 'ENGINEERING',
-    date: 'FEB 19, 2026',
+    date: 'JANUARY, 2026',
     title: 'Automating compliance checks in regulated environments',
     image: null,
     slug: 'automating-compliance-checks-2',
@@ -41,7 +41,7 @@ const defaultArticles = [
   {
     id: 3,
     category: 'ENGINEERING',
-    date: 'FEB 19, 2026',
+    date: 'JANUARY, 2026',
     title: 'Automating compliance checks in regulated environments',
     image: imgScreenshot,
     slug: 'automating-compliance-checks-3',
@@ -49,10 +49,10 @@ const defaultArticles = [
   },
 ];
 
-function BlogResourcesSection({ 
+function BlogResourcesSection({
   featuredPost = defaultFeaturedPost,
   articles = defaultArticles,
-  categories = defaultCategories 
+  categories = defaultCategories
 }) {
   const [activeCategory, setActiveCategory] = useState('ALL');
 

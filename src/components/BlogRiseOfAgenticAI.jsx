@@ -101,13 +101,9 @@ const BlogRiseOfAgenticAI = () => {
     return (
         <BlogPost
             category="AI STRATEGY"
-            date="MAY 24, 2024"
+            date="JANUARY, 2026"
             title="From Intelligence to Execution: The Rise of Agentic AI"
             subtitle="Why Agentic AI Is Reshaping Enterprise Systems"
-            author={{
-                name: "Pradeep Ganesan",
-                title: "Co-Founder, Chartered Vectorial"
-            }}
             content={content}
             image={image}
             nextPost={{

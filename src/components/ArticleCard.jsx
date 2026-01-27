@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './ArticleCard.css';
 
-function ArticleCard({ category, date, title, gradient, backgroundImage, slug }) {
+function ArticleCard({ category, date, title, displayTitle, gradient, backgroundImage, slug }) {
   return (
     <Link
       to={slug || '#'}
@@ -16,7 +16,7 @@ function ArticleCard({ category, date, title, gradient, backgroundImage, slug })
           <span className="article-card-category">{category}</span>
           <span className="article-card-date">{date}</span>
         </div>
-        <h3 className="article-card-title">{title}</h3>
+        <h3 className="article-card-title">{displayTitle || title}</h3>
       </div>
 
       <div className="article-card-image-container">

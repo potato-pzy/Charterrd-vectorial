@@ -206,11 +206,11 @@ function ProductsSection() {
                         <div className="accelerator-content sales-enablement-content">
                             <h3 className="accelerator-title sales-enablement-title">Sales Enablement Accelerator</h3>
                             <p className="accelerator-description sales-enablement-description">
-                                Instant answers from product docs, policies and FAQs.
+                                Instant answers from product docs, policies, FAQs to help sales teams close faster
                             </p>
                             <div className="accelerator-proof sales-enablement-proof">
                                 <span className="proof-label">PROOF POINT:</span>
-                                <span className="proof-value">2-4 HRS → +20 MIN (Cis)</span>
+                                <span className="proof-value">INSTANT VS. MANUAL LOOKUP (PWM JAPAN)</span>
                             </div>
                         </div>
                     </div>
@@ -227,7 +227,7 @@ function ProductsSection() {
                             </p>
                             <div className="accelerator-proof document-sync-proof">
                                 <span className="proof-label">PROOF POINT:</span>
-                                <span className="proof-value">INSTANT VS. MANUAL LOOKUP (PWM JAPAN)</span>
+                                <span className="proof-value">2-4 HRS → &lt;20 MIN (CIG)</span>
                             </div>
                         </div>
                     </div>

@@ -56,7 +56,7 @@ function Footer() {
         <div className="footer-right">
           <p className="footer-section-title" style={{ fontWeight: 'normal' }}>Get Connected</p>
           <nav className="footer-nav">
-            <Link to="/insights" className="footer-link footer-link-underline">Blog</Link>
+            <Link to="/whatwedo#blog" className="footer-link footer-link-underline">Blog</Link>
             <Link to="/contact" className="footer-link footer-link-underline">Contact</Link>
           </nav>
         </div>

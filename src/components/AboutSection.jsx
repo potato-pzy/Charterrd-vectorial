@@ -1,5 +1,5 @@
 import './AboutSection.css';
-import imgWomanWindow from '../assets/about-image-woman.png';
+import imgWomanWindow from '../assets/ Images/Web Images/HOMEPAGE/Top Right.jpg';
 import imgAbstract from '../assets/Asset 1.svg';
 
 function AboutSection() {

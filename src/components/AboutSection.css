@@ -146,13 +146,11 @@
 /* Image container - responsive sizing */
 .about-image-container {
     position: relative;
-    top: 65px;
-    left: 120px;
-    width: 100%;
-    /* maintains aspect ratio */
-    aspect-ratio: 362 / 401;
+    top: 121px;
+    left: 156px;
+    width: 72%;
+    aspect-ratio: 355 / 402;
     overflow: hidden;
-    border-radius: 0.125rem;
 }
 
 /* Main image - proper object-fit */

@@ -11,10 +11,7 @@ const BlogPost = ({
     date = "JAN 31, 2026",
     title = "The Agentic AI Blueprint: From Intelligence to Execution",
     subtitle = "In a world of static automation, agentic AI marks a fundamental shift from systems that follow instructions to systems that achieve objectives.",
-    author = {
-        name: "Pradeep Ganesan",
-        title: "Co-Founder, Chartered Vectorial"
-    },
+    author = null,
     content = null,
     image = featuredImage,
     prevPost = null,
@@ -80,11 +77,13 @@ const BlogPost = ({
                 {/* Main Content Layout */}
                 <section className="blog-content-layout">
                     <aside className="blog-sidebar">
-                        <div className="author-card">
-                            <p className="author-label">Written by</p>
-                            <h4 className="author-name">{author.name}</h4>
-                            <p className="author-title">{author.title}</p>
-                        </div>
+                        {author && (
+                            <div className="author-card">
+                                <p className="author-label">Written by</p>
+                                <h4 className="author-name">{author.name}</h4>
+                                <p className="author-title">{author.title}</p>
+                            </div>
+                        )}
 
                         <div className="share-links">
                             <p className="author-label">Share</p>
@@ -140,7 +139,14 @@ const BlogPost = ({
                                 <h3 className="nav-title">{prevPost.title}</h3>
                             </Link>
                         </div>
-                    ) : <div className="blog-nav-item"></div>}
+                    ) : (
+                        <div className="blog-nav-item">
+                            <p className="nav-label">Back to</p>
+                            <Link to="/whatwedo" className="nav-item-link">
+                                <h3 className="nav-title">What We Do</h3>
+                            </Link>
+                        </div>
+                    )}
 
                     {nextPost ? (
                         <div className="blog-nav-item" style={{ textAlign: 'right' }}>
@@ -149,7 +155,14 @@ const BlogPost = ({
                                 <h3 className="nav-title">{nextPost.title}</h3>
                             </Link>
                         </div>
-                    ) : <div className="blog-nav-item"></div>}
+                    ) : (
+                        <div className="blog-nav-item" style={{ textAlign: 'right' }}>
+                            <p className="nav-label">Explore more at</p>
+                            <Link to="/whatwedo" className="nav-item-link">
+                                <h3 className="nav-title">What We Do</h3>
+                            </Link>
+                        </div>
+                    )}
                 </section>
             </main>
 

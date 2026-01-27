@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './CaseStudiesSection.css';
 import caseStudyLeftTop from '../assets/homepage-case-study/case-study-left-top.jpg';
 import caseStudyLeftBottom from '../assets/homepage-case-study/case-study-left-bottom.jpg';
@@ -7,14 +8,14 @@ const leftColumnStudies = [
   {
     id: 1,
     image: caseStudyLeftTop,
-    description: 'Reduced regulatory compliance reviews from days to minutes using production-grade AI agents',
+    description: 'Intelligent Sales Copilot',
     company: 'PWM Japan Securities',
     aspectRatio: '16/9',
   },
   {
     id: 3,
     image: caseStudyLeftBottom,
-    description: 'Automated legal document updates with semantic accuracy and full traceability',
+    description: 'PatchBot — Intelligent Document Creation',
     company: 'Chartered Investment Germany',
     aspectRatio: '4/5',
   },
@@ -24,7 +25,7 @@ const rightColumnStudies = [
   {
     id: 2,
     image: caseStudyRight,
-    description: 'Enabled advisors to deliver instant, citation-backed answers from complex policy documents',
+    description: 'Intelligent Compliance',
     company: 'PWM Japan Securities',
     aspectRatio: '4/5',
   },
@@ -32,7 +33,11 @@ const rightColumnStudies = [
 
 function CaseStudyCard({ image, description, company, aspectRatio, isStaggered }) {
   return (
-    <div className={`case-study-card ${isStaggered ? 'case-study-staggered' : ''}`}>
+    <Link
+      to="/whatwedo#case-studies"
+      className={`case-study-card ${isStaggered ? 'case-study-staggered' : ''}`}
+      style={{ textDecoration: 'none', display: 'block' }}
+    >
       <div className="case-study-image-wrapper">
         <div className={`case-study-image aspect-${aspectRatio.replace('/', '-')}`}>
           <div className="image-overlay"></div>
@@ -43,7 +48,7 @@ function CaseStudyCard({ image, description, company, aspectRatio, isStaggered }
         <p className="case-study-description">{description}</p>
         <p className="case-study-company">{company}</p>
       </div>
-    </div>
+    </Link>
   );
 }
 

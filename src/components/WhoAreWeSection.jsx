@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import { TextGradientScroll } from './ui/text-gradient-scroll';
 import { FlickeringGrid } from './ui/flickering-grid';
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import logoSvg from '../assets/Asset 1.svg';
 import layer1Image from '../assets/Layer 1.png';
 import weBuildImage from '../assets/we_build.jpeg';
@@ -140,33 +141,31 @@ function WhoAreWeSection() {
                 {/* Content Section */}
                 <section className="whoarewe-content">
                     <div className="whoarewe-content-text">
-                        <TextGradientScroll
-                            text="The traditional model separates thinking from doing. Consultants advise. Engineers build. Handoffs create gaps. Pilots stall."
-                            type="letter"
-                            textOpacity="soft"
-                            className="whoarewe-para"
-                        />
-
-                        <TextGradientScroll
-                            text="We built Chartered Vectorial to close that gap, and we did it with AI."
-                            type="letter"
-                            textOpacity="soft"
-                            className="whoarewe-para"
-                        />
-
-                        <TextGradientScroll
-                            text="Our AI agents validate transformation hypotheses with consulting-grade rigor. Our AI agents debate approaches, write code, and review each other's work before anything ships. Humans stay in control at every gate."
-                            type="letter"
-                            textOpacity="soft"
-                            className="whoarewe-para"
-                        />
-
-                        <TextGradientScroll
-                            text="We're an AI-native consulting firm focused on AI transformation. We don't just advise on AI, we use it to deliver."
-                            type="letter"
-                            textOpacity="soft"
-                            className="whoarewe-para whoarewe-highlight"
-                        />
+                        {[
+                            "The traditional model separates thinking from doing. Consultants advise. Engineers build. Handoffs create gaps. Pilots stall.",
+                            "We built Chartered Vectorial to close that gap, and we did it with AI.",
+                            "Our AI agents validate transformation hypotheses with consulting-grade rigor. Our AI agents debate approaches, write code, and review each other's work before anything ships. Humans stay in control at every gate.",
+                            "We're an AI-native consulting firm focused on AI transformation. We don't just advise on AI, we use it to deliver."
+                        ].map((text, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{
+                                    duration: 0.8,
+                                    delay: index * 0.1,
+                                    ease: [0.21, 0.47, 0.32, 0.98]
+                                }}
+                            >
+                                <TextGradientScroll
+                                    text={text}
+                                    type="letter"
+                                    textOpacity="soft"
+                                    className={`whoarewe-para ${index === 3 ? 'whoarewe-highlight' : ''}`}
+                                />
+                            </motion.div>
+                        ))}
                     </div>
                 </section>
 
@@ -305,7 +304,7 @@ function WhoAreWeSection() {
                     {/* Meet the Founders Section */}
                     <div className="whoarewe-founders">
                         <div className="whoarewe-founders-header">
-                            <h2 className="whoarewe-founders-title">Meet the founders</h2>
+                            <h2 className="whoarewe-founders-title">Meet<br /> <span className="whoarewe-highlight">the founders</span></h2>
                             <p className="whoarewe-founders-description">
                                 The founders of Chartered Vectorial bring experience across engineering, operations, and large-scale system delivery.
                             </p>
@@ -315,14 +314,14 @@ function WhoAreWeSection() {
                                 <div className="whoarewe-founder-front">
                                     <img src={founderEyalImage} alt="Eyal Agmoni" className="whoarewe-founder-image" style={{ transform: 'translateY(-10px)' }} />
                                     <div className="whoarewe-founder-gradient"></div>
-                                    <h3 className="whoarewe-founder-name">Eyal Agmoni</h3>
+                                    <h3 className="whoarewe-founder-name">Pradeep Menon</h3>
                                 </div>
                                 <div className="whoarewe-founder-back">
                                     <div className="whoarewe-founder-back-bg"></div>
                                     <div className="whoarewe-founder-back-content">
                                         <h3 className="whoarewe-founder-back-name">Pradeep Menon</h3>
                                         <p className="whoarewe-founder-back-designation">FOUNDER & CEO, CHARTERED VECTORIAL</p>
-                                        <p className="whoarewe-founder-back-bio">Pradeep Menon is the founder and CEO of Chartered Vectorial. He started CV to build the AI firm he wished existed, one that ships production-grade AI, fast, for enterprises tired of pilots that go nowhere. Over 20 years, Pradeep held senior roles at Microsoft (Field CTO—Digital Natives, Asia), Alibaba Cloud (Director, Big Data & AI Solutions), and IBM (Sr. Architect), delivering Data and AI solutions across Europe and Asia. He's a published author and keynote speaker on AI transformation, strategy, and business case development. Know where AI fits before you commit budget.</p>
+                                        <p className="whoarewe-founder-back-bio">Pradeep Menon is the founder and CEO of Chartered Vectorial. He started CV to build the AI firm he wished existed, one that ships production-grade AI, fast, for enterprises tired of pilots that go nowhere. Over 20 years, Pradeep held senior roles at Microsoft (Field CTO—Digital Natives, Asia), Alibaba Cloud (Director, Big Data & AI Solutions), and IBM (Sr. Architect), delivering Data and AI solutions across Europe and Asia. He's a published author and keynote speaker on AI transformation.</p>
                                     </div>
                                 </div>
                             </div>
@@ -330,7 +329,7 @@ function WhoAreWeSection() {
                                 <div className="whoarewe-founder-front">
                                     <img src={founderPradeepImage} alt="Pradeep Menon" className="whoarewe-founder-image" style={{ height: '130%', transform: 'translateY(-15px)' }} />
                                     <div className="whoarewe-founder-gradient"></div>
-                                    <h3 className="whoarewe-founder-name">Pradeep Menon</h3>
+                                    <h3 className="whoarewe-founder-name">Eyal Agmoni</h3>
                                 </div>
                                 <div className="whoarewe-founder-back">
                                     <div className="whoarewe-founder-back-bg"></div>

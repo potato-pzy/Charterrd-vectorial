@@ -107,13 +107,13 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    color: #DFED3F;
+    color: #A6F63B;
     text-align: center;
     text-shadow: 0 0 4px #FFF;
 }
 
 .scroll-to-explore svg {
-    color: #DFED3F;
+    color: #A6F63B;
 }
 
 /* Framework Cards Grid */
@@ -308,6 +308,15 @@
     width: 100%;
 }
 
+.ai-discovery-image-link {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.ai-discovery-image-link:hover {
+    opacity: 0.9;
+}
+
 .ai-discovery-image-container {
     position: relative;
     width: 100%;
@@ -321,6 +330,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.ai-discovery-image-link:hover .ai-discovery-bg-image {
+    transform: scale(1.02);
 }
 
 .ai-discovery-gradient-overlay {
@@ -331,6 +345,7 @@
     bottom: 0;
     background: linear-gradient(112.55deg, rgba(31, 54, 56, 0.8) 9.37%, rgba(0, 175, 103, 0) 40.17%);
     mix-blend-mode: multiply;
+    pointer-events: none;
 }
 
 .ai-discovery-title {
@@ -345,6 +360,7 @@
     letter-spacing: 0.05em;
     margin: 0;
     z-index: 2;
+    pointer-events: none;
 }
 
 .ai-discovery-text-overlay {
@@ -353,6 +369,9 @@
     background: rgba(0, 20, 25, 1);
     padding: 32px;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .ai-discovery-text {
@@ -361,6 +380,25 @@
     color: #ffffff;
     line-height: 1.4;
     margin: 0;
+}
+
+.ai-discovery-blog-link {
+    display: inline-block;
+    font-family: "Stage Grotesk", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #a6f63b;
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 1px solid #a6f63b;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.ai-discovery-blog-link:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+    padding-left: 8px;
 }
 
 .ai-discovery-pagination {
@@ -460,10 +498,15 @@
 
     .ai-discovery-text-overlay {
         padding: 24px;
+        gap: 12px;
     }
 
     .ai-discovery-text {
         font-size: 18px;
+    }
+
+    .ai-discovery-blog-link {
+        font-size: 13px;
     }
 
     .ai-discovery-pagination {
@@ -512,10 +555,15 @@
 
     .ai-discovery-text-overlay {
         padding: 20px;
+        gap: 12px;
     }
 
     .ai-discovery-text {
         font-size: 16px;
+    }
+
+    .ai-discovery-blog-link {
+        font-size: 12px;
     }
 
     .ai-discovery-pagination {

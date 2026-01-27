@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './WhatWeDo.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -19,6 +20,30 @@ import blog3 from '../assets/accelerators_native.jpg';
 function WhatWeDo() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState(1);
+  const location = useLocation();
+
+  // Scroll to section if hash is present
+  useEffect(() => {
+    if (location.hash === '#blog') {
+      const scrollToBlog = () => {
+        const element = document.getElementById('blog');
+        if (element) {
+          const headerOffset = 80; // Adjust for sticky navbar
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      };
+
+      // Try scrolling after a short delay to ensure DOM is ready
+      const timer = setTimeout(scrollToBlog, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [location.hash, location.pathname]);
 
   const frameworks = [
     {
@@ -47,17 +72,20 @@ function WhatWeDo() {
     {
       title: 'AI-POWERED DISCOVERY',
       image: blog1,
-      text: 'Our AI agents validate transformation hypotheses with consulting-grade rigor, identifying opportunities and quantifying ROI in days, not weeks.'
+      text: 'Our AI agents validate transformation hypotheses with consulting-grade rigor, identifying opportunities and quantifying ROI in days, not weeks.',
+      blogLink: '/blog/agentic-ai-blueprint'
     },
     {
       title: 'Agent built solutions',
       image: blog2,
-      text: 'AI agents analyze, architect, code, and review together. Humans approve what matters. Production-grade output, accelerated timelines.'
+      text: 'AI agents analyze, architect, code, and review together. Humans approve what matters. Production-grade output, accelerated timelines.',
+      blogLink: '/blog/rise-of-agentic-ai'
     },
     {
       title: 'Pre-built Accelerators',
       image: blog3,
-      text: 'Battle-tested components for compliance, document intelligence, and sales enablement. Proven starting points, customized for your context.'
+      text: 'Battle-tested components for compliance, document intelligence, and sales enablement. Proven starting points, customized for your context.',
+      blogLink: '/blog/founders-note'
     }
   ];
 
@@ -147,7 +175,7 @@ function WhatWeDo() {
           </div>
 
           {/* AI Discovery card */}
-          <div className="ai-discovery-section">
+          <div id="blog" className="ai-discovery-section">
             {/* Radial glow effect */}
             <div className="ai-discovery-ellipse-glow" />
 
@@ -172,24 +200,39 @@ function WhatWeDo() {
                   }}
                   className="ai-discovery-card"
                 >
-                  {/* Background with image */}
-                  <div className="ai-discovery-image-container">
-                    <img
-                      src={aiSlides[currentSlide].image}
-                      alt=""
-                      className="ai-discovery-bg-image"
-                    />
-                    <div className="ai-discovery-gradient-overlay" />
+                  {/* Image Link Wrapper */}
+                  <Link 
+                    to={aiSlides[currentSlide].blogLink || '#'} 
+                    className="ai-discovery-image-link"
+                    style={{ textDecoration: 'none', display: 'block' }}
+                  >
+                    {/* Background with image */}
+                    <div className="ai-discovery-image-container">
+                      <img
+                        src={aiSlides[currentSlide].image}
+                        alt=""
+                        className="ai-discovery-bg-image"
+                      />
+                      <div className="ai-discovery-gradient-overlay" />
 
-                    {/* Title inside image */}
-                    <h3 className="ai-discovery-title">{aiSlides[currentSlide].title}</h3>
-                  </div>
+                      {/* Title inside image */}
+                      <h3 className="ai-discovery-title">{aiSlides[currentSlide].title}</h3>
+                    </div>
+                  </Link>
 
                   {/* Text overlay at bottom */}
                   <div className="ai-discovery-text-overlay">
                     <p className="ai-discovery-text">
                       {aiSlides[currentSlide].text}
                     </p>
+                    {aiSlides[currentSlide].blogLink && (
+                      <Link 
+                        to={aiSlides[currentSlide].blogLink}
+                        className="ai-discovery-blog-link"
+                      >
+                        Learn More →
+                      </Link>
+                    )}
                   </div>
                 </motion.div>
               </AnimatePresence>
