@@ -1,4 +1,5 @@
 import './CTASection.css';
+import { Link } from 'react-router-dom';
 
 function CTASection({ title, subtitle, buttonText }) {
   return (
@@ -13,7 +14,9 @@ function CTASection({ title, subtitle, buttonText }) {
       <div className="cta-content">
         <h2 className="cta-title">{title || "What comes next is worth building together."}</h2>
         {subtitle && <p className="cta-subtitle">{subtitle}</p>}
-        <button className="cta-button">{buttonText || "BOOK A DISCOVERY CALL"}</button>
+        <Link to="/contact">
+          <button className="cta-button">{buttonText || "BOOK A DISCOVERY CALL"}</button>
+        </Link>
       </div>
     </section>
   );

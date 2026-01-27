@@ -132,21 +132,12 @@ const BlogPost = ({
 
                 {/* Bottom Navigation */}
                 <section className="blog-footer-nav">
-                    {prevPost ? (
-                        <div className="blog-nav-item">
-                            <p className="nav-label">Previous Insight</p>
-                            <Link to={prevPost.slug} className="nav-item-link">
-                                <h3 className="nav-title">{prevPost.title}</h3>
-                            </Link>
-                        </div>
-                    ) : (
-                        <div className="blog-nav-item">
-                            <p className="nav-label">Back to</p>
-                            <Link to="/whatwedo" className="nav-item-link">
-                                <h3 className="nav-title">What We Do</h3>
-                            </Link>
-                        </div>
-                    )}
+                    <div className="blog-nav-item">
+                        <p className="nav-label">Back to</p>
+                        <Link to="/insights#blogs" className="nav-item-link">
+                            <h3 className="nav-title">Insights</h3>
+                        </Link>
+                    </div>
 
                     {nextPost ? (
                         <div className="blog-nav-item" style={{ textAlign: 'right' }}>
@@ -157,9 +148,9 @@ const BlogPost = ({
                         </div>
                     ) : (
                         <div className="blog-nav-item" style={{ textAlign: 'right' }}>
-                            <p className="nav-label">Explore more at</p>
-                            <Link to="/whatwedo" className="nav-item-link">
-                                <h3 className="nav-title">What We Do</h3>
+                            <p className="nav-label">Next Insight</p>
+                            <Link to="/blog/agentic-ai-blueprint" className="nav-item-link">
+                                <h3 className="nav-title">The Agentic AI Blueprint</h3>
                             </Link>
                         </div>
                     )}

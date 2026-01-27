@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './ProductsSection.css';
 import { AnimatePresence, motion } from 'framer-motion';
 // import ComplianceIcon from './ComplianceIcon';
@@ -97,12 +98,14 @@ function ProductsSection() {
                         <h2 className="products-title">
                             Turn manual, rule-driven processes into fast, consistent agentic workflows.
                         </h2>
-                        <button className="btn-explore">
-                            EXPLORE MORE
-                            <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 5H12M12 5L8 1M12 5L8 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                        </button>
+                        <Link to="/whatwedo#what-we-do-section">
+                            <button className="btn-explore">
+                                EXPLORE MORE
+                                <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 5H12M12 5L8 1M12 5L8 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </button>
+                        </Link>
                     </div>
 
                     {/* Right Side - Card Carousel */}

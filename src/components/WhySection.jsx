@@ -28,14 +28,14 @@ const rightColumnCards = [
     titleParts: ['AI-Native by', 'Design'],
     stat: '100%',
     body: 'Our delivery runs on Agentic SDLC — AI agents that analyze, architect, and review together. Humans approve what matters.',
-    label: 'Decision traceability across deployed agents',
+    label: 'Decision traceability',
   },
   {
     title: 'Enterprise Governance & Reliability',
     titleParts: ['Enterprise Governance', '& Reliability'],
     stat: '24/7',
     body: 'Monitoring, drift detection, and monthly improvement cycles. Your agents stay accurate and resilient.',
-    label: 'Operational monitoring & governance',
+    label: 'Operational monitoring',
   },
 ];
 

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './NewPage.css'
 import './AboutSection.css'
 import './ProductsSection.css'
@@ -36,7 +37,7 @@ function NewPage() {
                 By embedding with your teams, we turn high-value opportunities into production-grade AI agents and stay until they deliver.<br /><br />
                 Not a report. Not a promise. Transformation you can see.
               </p>
-              <button className="btn-see-how">SEE HOW WE WORK</button>
+              <Link to="/whatwedo" className="btn-see-how">SEE HOW WE WORK</Link>
             </div>
             <div className="about-image-abstract">
               <img src={aboutLogo} alt="" className="abstract-image" />

@@ -43,6 +43,25 @@ function WhatWeDo() {
       const timer = setTimeout(scrollToBlog, 100);
       return () => clearTimeout(timer);
     }
+
+    if (location.hash === '#what-we-do-section') {
+      const scrollToSection = () => {
+        const element = document.getElementById('what-we-do-section');
+        if (element) {
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      };
+
+      const timer = setTimeout(scrollToSection, 100);
+      return () => clearTimeout(timer);
+    }
   }, [location.hash, location.pathname]);
 
   const frameworks = [
@@ -73,19 +92,19 @@ function WhatWeDo() {
       title: 'AI-POWERED DISCOVERY',
       image: blog1,
       text: 'Our AI agents validate transformation hypotheses with consulting-grade rigor, identifying opportunities and quantifying ROI in days, not weeks.',
-      blogLink: '/blog/agentic-ai-blueprint'
+      blogLink: '/contact'
     },
     {
       title: 'Agent built solutions',
       image: blog2,
       text: 'AI agents analyze, architect, code, and review together. Humans approve what matters. Production-grade output, accelerated timelines.',
-      blogLink: '/blog/rise-of-agentic-ai'
+      blogLink: '/contact'
     },
     {
       title: 'Pre-built Accelerators',
       image: blog3,
       text: 'Battle-tested components for compliance, document intelligence, and sales enablement. Proven starting points, customized for your context.',
-      blogLink: '/blog/founders-note'
+      blogLink: '/contact'
     }
   ];
 
@@ -145,7 +164,7 @@ function WhatWeDo() {
         </div>
       </section>
 
-      <section className="what-we-do-section">
+      <section className="what-we-do-section" id="what-we-do-section">
         <div className="what-we-do-glow"></div>
         <div className="what-we-do-container">
 
@@ -201,8 +220,8 @@ function WhatWeDo() {
                   className="ai-discovery-card"
                 >
                   {/* Image Link Wrapper */}
-                  <Link 
-                    to={aiSlides[currentSlide].blogLink || '#'} 
+                  <Link
+                    to={aiSlides[currentSlide].blogLink || '#'}
                     className="ai-discovery-image-link"
                     style={{ textDecoration: 'none', display: 'block' }}
                   >
@@ -226,7 +245,7 @@ function WhatWeDo() {
                       {aiSlides[currentSlide].text}
                     </p>
                     {aiSlides[currentSlide].blogLink && (
-                      <Link 
+                      <Link
                         to={aiSlides[currentSlide].blogLink}
                         className="ai-discovery-blog-link"
                       >

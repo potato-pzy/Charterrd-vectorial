@@ -13,7 +13,9 @@ function CareersCTASection({ title, subtitle, buttonText }) {
       <div className="careers-cta-content">
         <h2 className="careers-cta-title">{title || "Shape what's next!"}</h2>
         <p className="careers-cta-subtitle">{subtitle || "We're always looking for exceptional people. Reach out."}</p>
-        <button className="careers-cta-button">{buttonText || "FOLLOW ON LINKEDIN"}</button>
+        <a href="https://www.linkedin.com/company/charteredvectorial" target="_blank" rel="noopener noreferrer">
+          <button className="careers-cta-button">{buttonText || "FOLLOW ON LINKEDIN"}</button>
+        </a>
       </div>
     </section>
   );

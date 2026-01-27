@@ -18,19 +18,22 @@ function Navbar() {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
             const isHomePage = currentPath === '/';
+            const scrollDifference = currentScrollY - lastScrollY;
 
+            // At top, always show
             if (currentScrollY < 10) {
-                // At top, always show
                 setIsVisible(true);
-            } else if (currentScrollY > lastScrollY) {
-                // Scrolling down
+            }
+            // Scrolling down with some threshold to prevent jitter
+            else if (scrollDifference > 5) {
                 if (isHomePage) {
                     setIsVisible(false);
                 } else {
                     setIsVisible(false);
                 }
-            } else if (currentScrollY < lastScrollY) {
-                // Scrolling up
+            }
+            // Scrolling up - show immediately
+            else if (scrollDifference < -5) {
                 setIsVisible(true);
             }
 
@@ -80,7 +83,7 @@ function Navbar() {
                         </li>
                     </ul>
                 </div>
-                <a href="#" className="navbar-cta">Book a discovery call</a>
+                <Link to="/contact" className="navbar-cta">Book a discovery call</Link>
                 <button className="navbar-mobile-menu">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <line x1="3" y1="6" x2="21" y2="6"></line>

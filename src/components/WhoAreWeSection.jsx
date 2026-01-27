@@ -304,9 +304,9 @@ function WhoAreWeSection() {
                     {/* Meet the Founders Section */}
                     <div className="whoarewe-founders">
                         <div className="whoarewe-founders-header">
-                            <h2 className="whoarewe-founders-title">Meet<br /> <span className="whoarewe-highlight">the founders</span></h2>
+                            <h2 className="whoarewe-founders-title">Meet<br /> <span className="whoarewe-highlight">the Founders</span></h2>
                             <p className="whoarewe-founders-description">
-                                The founders of Chartered Vectorial bring experience across engineering, operations, and large-scale system delivery.
+                                The Founders of Chartered Vectorial bring experience across engineering, operations, and large-scale system delivery.
                             </p>
                         </div>
                         <div className="whoarewe-founders-grid">
@@ -320,8 +320,8 @@ function WhoAreWeSection() {
                                     <div className="whoarewe-founder-back-bg"></div>
                                     <div className="whoarewe-founder-back-content">
                                         <h3 className="whoarewe-founder-back-name">Pradeep Menon</h3>
-                                        <p className="whoarewe-founder-back-designation">FOUNDER & CEO, CHARTERED VECTORIAL</p>
-                                        <p className="whoarewe-founder-back-bio">Pradeep Menon is the founder and CEO of Chartered Vectorial. He started CV to build the AI firm he wished existed, one that ships production-grade AI, fast, for enterprises tired of pilots that go nowhere. Over 20 years, Pradeep held senior roles at Microsoft (Field CTO—Digital Natives, Asia), Alibaba Cloud (Director, Big Data & AI Solutions), and IBM (Sr. Architect), delivering Data and AI solutions across Europe and Asia. He's a published author and keynote speaker on AI transformation.</p>
+                                        <p className="whoarewe-founder-back-designation">Founder & CEO, Chartered Vectorial</p>
+                                        <p className="whoarewe-founder-back-bio">Pradeep Menon is the Founder and CEO of Chartered Vectorial. He started CV to build the AI firm he wished existed, one that ships production-grade AI, fast, for enterprises tired of pilots that go nowhere. Over 20 years, Pradeep held senior roles at Microsoft (Field CTO—Digital Natives, Asia), Alibaba Cloud (Director, Big Data & AI Solutions), and IBM (Sr. Architect), delivering Data and AI solutions across Europe and Asia. He's a published author and keynote speaker on AI transformation.</p>
                                     </div>
                                 </div>
                             </div>
@@ -335,7 +335,7 @@ function WhoAreWeSection() {
                                     <div className="whoarewe-founder-back-bg"></div>
                                     <div className="whoarewe-founder-back-content">
                                         <h3 className="whoarewe-founder-back-name">Eyal Agmoni</h3>
-                                        <p className="whoarewe-founder-back-designation">CO-FOUNDER, CHARTERED VECTORIAL | FOUNDER OF CHARTERED GROUP AND CEO OF CHARTERED INVESTMENT MANAGERS</p>
+                                        <p className="whoarewe-founder-back-designation">Co-Founder, Chartered Vectorial | Founder of Chartered Group and CEO of Chartered Investment Managers</p>
                                         <p className="whoarewe-founder-back-bio">Eyal Agmoni has spent 35 years building and investing in businesses across Europe and Asia. As Founder of Chartered Group, he's seen how technology reshapes industries and how most enterprises struggle to capture that value. He co-founded Chartered Vectorial to bridge that gap: backing a team that gets AI from strategy to production, not just pilots.</p>
                                     </div>
                                 </div>

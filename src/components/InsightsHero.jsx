@@ -8,7 +8,7 @@ function InsightsHero() {
       <Navbar />
       <LightRays
         raysOrigin="top-center"
-        raysColor="#00af67"
+        raysColor="#A6F63B"
         raysSpeed={1}
         lightSpread={0.5}
         rayLength={3}

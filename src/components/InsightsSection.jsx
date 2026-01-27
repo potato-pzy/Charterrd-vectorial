@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import ArticleCard from './ArticleCard';
 import './InsightsSection.css';
 import featuredImage from '../assets/featured.png';
@@ -56,6 +56,18 @@ function InsightsSection({
   showBookCallButton = true
 }) {
   const [activeCategory, setActiveCategory] = useState('ALL');
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#blogs') {
+      setTimeout(() => {
+        const element = document.getElementById('blogs');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [location]);
 
   return (
     <section className="insights-section">
@@ -94,7 +106,7 @@ function InsightsSection({
         </Link>
 
         {/* Featured Article Section */}
-        <div className="insights-main-content">
+        <div className="insights-main-content" id="blogs">
           {/* Filter Buttons */}
           <div className="insights-filters">
             {categories.map((cat) => (

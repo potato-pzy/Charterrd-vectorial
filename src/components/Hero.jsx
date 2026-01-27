@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Hero.css';
 import Navbar from './Navbar';
 import heroVideo from '../assets/Output_converted(3).mp4';
@@ -5,12 +6,13 @@ import heroVideo from '../assets/Output_converted(3).mp4';
 function Hero() {
     return (
         <div className="hero">
-            <video 
+            <video
                 className="hero-video"
-                autoPlay 
-                loop 
-                muted 
+                autoPlay
+                loop
+                muted
                 playsInline
+                preload="auto"
             >
                 <source src={heroVideo} type="video/mp4" />
             </video>
@@ -25,9 +27,11 @@ function Hero() {
                     <p className="hero-subtitle blauer-neue">
                         AI-NATIVE. EMBEDDED. STRATEGY TO PRODUCTION
                     </p>
-                    <button className="btn-primary">
-                        <div className="btn-primary-text">BOOK A DISCOVERY CALL</div>
-                    </button>
+                    <Link to="/contact">
+                        <button className="btn-primary">
+                            <div className="btn-primary-text">BOOK A DISCOVERY CALL</div>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

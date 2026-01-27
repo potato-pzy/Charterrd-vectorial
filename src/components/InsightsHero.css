@@ -7,7 +7,8 @@
 }
 
 /* Top black gradient - pro UI enhancement */
-.insights-hero::after {
+/* Overlay removed */
+/* .insights-hero::after {
   content: '';
   position: absolute;
   top: 0;
@@ -17,7 +18,7 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 30%, transparent 100%);
   z-index: 2;
   pointer-events: none;
-}
+} */
 
 /* Navbar overrides handled by global Navbar.css */
 

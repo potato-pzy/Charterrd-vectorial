@@ -32,7 +32,7 @@ function RolesSection({ roles = rolesData }) {
       <div className="roles-container">
         {/* Left Side - Title and Tabs */}
         <div className="roles-left">
-          <h2 className="roles-main-title">Types of Roles</h2>
+          <h2 className="roles-main-title">Types of <br /> Roles</h2>
 
           <div className="roles-tabs">
             {roles.map((role) => (
@@ -54,7 +54,7 @@ function RolesSection({ roles = rolesData }) {
             <p className="roles-intro-text">
               Three roles. One mission.{'\n'}
               <span className="roles-highlight">Vectors deploy. Forgers build. Pathfinders discover.</span>{'\n'}
-              Together, they move clients from vision to production.
+              <span className="roles-highlight">Together, they move clients from vision to production.</span>
             </p>
           </div>
 

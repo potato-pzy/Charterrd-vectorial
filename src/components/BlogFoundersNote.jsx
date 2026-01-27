@@ -132,12 +132,12 @@ const BlogFoundersNote = () => {
 
     return (
         <BlogPost
-            category="PHILOSOPHY"
+            category="Founders Note"
             date="JANUARY, 2026"
             title="Founder's Note: Why This Firm Exists"
             subtitle="Reflections from inside the work of building an AI-native future."
             author={{
-                name: "Pradeep Kumar",
+                name: "Pradeep Menon",
                 title: "Co-Founder, Chartered Vectorial"
             }}
             content={content}
@@ -145,6 +145,10 @@ const BlogFoundersNote = () => {
             prevPost={{
                 title: "The Agentic AI Blueprint",
                 slug: "/blog/agentic-ai-blueprint"
+            }}
+            nextPost={{
+                title: "From Intelligence to Execution",
+                slug: "/blog/rise-of-agentic-ai"
             }}
         />
     );

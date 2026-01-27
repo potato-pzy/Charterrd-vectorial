@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './AboutSection.css';
 import imgWomanWindow from '../assets/ Images/Web Images/HOMEPAGE/Top Right.jpg';
 import imgAbstract from '../assets/Asset 1.svg';
@@ -17,7 +18,7 @@ function AboutSection() {
                             By embedding with your teams, we turn high-value opportunities into production-grade AI agents and stay until they deliver.<br /><br />
                             Not a report. Not a promise. Transformation you can see.
                         </p>
-                        <button className="btn-see-how">SEE HOW WE WORK</button>
+                        <Link to="/whatwedo" className="btn-see-how">SEE HOW WE WORK</Link>
                     </div>
                     <div className="about-image-abstract">
                         <img src={imgAbstract} alt="" className="abstract-image" />

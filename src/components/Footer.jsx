@@ -36,7 +36,7 @@ function Footer() {
             <a href="https://x.com/cvectorial15617?s=21" target="_blank" rel="noopener noreferrer" className="footer-social-link">
               <img src={twitterIcon} alt="Twitter" className="footer-social-icon-img" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+            <a href="https://www.linkedin.com/company/charteredvectorial" target="_blank" rel="noopener noreferrer" className="footer-social-link">
               <img src={linkedinIcon} alt="LinkedIn" className="footer-social-icon-img" />
             </a>
           </div>
