@@ -6,30 +6,30 @@ import { TextGradientScroll } from './ui/text-gradient-scroll';
 import { GlowingEffect } from './GlowingEffect';
 import GlassBorder from './GlassBorder';
 import RolesSection from './RolesSection';
-import { useState } from 'react';
+
+import visionariesIcon from '../assets/Visionaries.svg';
+import orchestratorIcon from '../assets/Orchestrator.svg';
+import buildersIcon from '../assets/Builders.svg';
+import learnerIcon from '../assets/Learner.svg';
 
 function CareersSection() {
     return (
         <div className="careers-page">
-            {/* Background Elements */}
             <div className="careers-background">
                 <div className="careers-grid-pattern"></div>
                 <div className="careers-gradient-blob"></div>
             </div>
 
             <main className="careers-main">
-                {/* Hero Section */}
                 <section className="careers-hero">
                     <Navbar />
                     <div className="careers-hero-container">
-                        {/* Main Headline */}
                         <div className="careers-hero-content">
                             <h1 className="careers-hero-title">
                                 REAL WORLD AI<br />
                                 NEEDS <span className="careers-hero-title-green">REAL WORLD THINKING.</span>
                             </h1>
 
-                            {/* Subtitle */}
                             <div className="careers-hero-subtitle-wrapper">
                                 <p className="careers-hero-subtitle">
                                     At Chartered Vectorial, AI agents are teammates, not just tools. We're building a new kind of firm for people who want to shape what's next.
@@ -42,9 +42,7 @@ function CareersSection() {
                     </div>
                 </section>
 
-                {/* Statement Section */}
                 <section className="careers-statement">
-                    {/* Decorative gradient behind text */}
                     <div className="careers-statement-gradient"></div>
 
                     <div className="careers-statement-container">
@@ -60,16 +58,13 @@ function CareersSection() {
                     </div>
                 </section>
 
-                {/* Decorative Ellipse Section */}
                 <section className="careers-ellipse-section">
                     <div className="careers-ellipse-container">
                         <div className="careers-ellipse-glow"></div>
                     </div>
                 </section>
 
-                {/* Who Thrives Here Section */}
                 <section className="careers-who-thrives">
-                    {/* Glow Ellipse */}
                     <div className="careers-who-thrives-glow"></div>
                     <h2 className="careers-who-thrives-title">
                         Who thrives here
@@ -90,6 +85,9 @@ function CareersSection() {
                             />
                             <GlassBorder />
                             <div className="careers-who-thrives-card-content">
+                                <div className="careers-thrives-icon">
+                                    <img src={visionariesIcon} alt="" />
+                                </div>
                                 <h3 className="careers-who-thrives-card-title">Visionaries</h3>
                             </div>
                             <p className="careers-who-thrives-card-text">
@@ -111,6 +109,9 @@ function CareersSection() {
                             />
                             <GlassBorder />
                             <div className="careers-who-thrives-card-content">
+                                <div className="careers-thrives-icon">
+                                    <img src={orchestratorIcon} alt="" />
+                                </div>
                                 <h3 className="careers-who-thrives-card-title">Orchestrators</h3>
                             </div>
                             <p className="careers-who-thrives-card-text">
@@ -132,6 +133,9 @@ function CareersSection() {
                             />
                             <GlassBorder />
                             <div className="careers-who-thrives-card-content">
+                                <div className="careers-thrives-icon">
+                                    <img src={buildersIcon} alt="" />
+                                </div>
                                 <h3 className="careers-who-thrives-card-title">Builders</h3>
                             </div>
                             <p className="careers-who-thrives-card-text">
@@ -153,6 +157,9 @@ function CareersSection() {
                             />
                             <GlassBorder />
                             <div className="careers-who-thrives-card-content">
+                                <div className="careers-thrives-icon">
+                                    <img src={learnerIcon} alt="" />
+                                </div>
                                 <h3 className="careers-who-thrives-card-title">Learners</h3>
                             </div>
                             <p className="careers-who-thrives-card-text">
@@ -162,17 +169,13 @@ function CareersSection() {
                     </div>
                 </section>
 
-                {/* Types of Roles Section */}
-                {/* Types of Roles Section */}
                 <RolesSection />
             </main>
 
-            <CareersCTASection
-            />
+            <CareersCTASection />
             <Footer />
         </div>
     );
 }
 
 export default CareersSection;
-
