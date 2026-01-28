@@ -599,9 +599,12 @@ function AcceleratorsSection() {
                     </div>
                   </div>
 
-                  <h3 className="acc-title">{card.title}</h3>
-                  <div className="acc-desc">
-                    <p>{card.body}</p>
+                  {/* Title and Description Swapper */}
+                  <div className="acc-text-swap-container">
+                    <h3 className="acc-title">{card.title}</h3>
+                    <div className="acc-desc">
+                      <p>{card.body}</p>
+                    </div>
                   </div>
                 </div>
 
