@@ -191,7 +191,17 @@ const lightCards = [
           },
           {
             heading: 'Rule-Based Intelligence',
-            content: 'Four foundational compliance rules specifically designed for Japanese financial documents:\n\n• Client-Centric Swap Justification - Ensures investment swaps benefit the client, not just generate fees\n• Risk Disclosure Verification - Verifies logical, relevant risk explanations are provided\n• Cost Transparency Validation - Ensures all costs are disclosed for client understanding\n• Client Understanding Documentation - Confirms informed consent through client\'s own words'
+            content: (
+              <>
+                Four foundational compliance rules specifically designed for Japanese financial documents:
+                <ul className="list-disc pl-5 mt-4 space-y-2">
+                  <li><span className="text-white">Client-Centric Swap Justification</span> – Ensures investment swaps benefit the client, not just generate fees</li>
+                  <li><span className="text-white">Risk Disclosure Verification</span> – Verifies logical, relevant risk explanations are provided</li>
+                  <li><span className="text-white">Cost Transparency Validation</span> – Ensures all costs are disclosed for client understanding</li>
+                  <li><span className="text-white">Client Understanding Documentation</span> – Confirms informed consent through client's own words</li>
+                </ul>
+              </>
+            )
           },
           {
             heading: 'Bilingual by Design',
@@ -465,7 +475,7 @@ function CaseCard({ image, label, title, content, sections, cardId, shouldAutoOp
                             {section.subsections && section.subsections.map((sub, subIdx) => (
                               <div key={subIdx} className="mb-6">
                                 <h5 className="text-white text-lg font-medium mb-2">{sub.heading}</h5>
-                                <p>{sub.content}</p>
+                                <div className="text-gray-300 leading-relaxed">{sub.content}</div>
                               </div>
                             ))}
 
