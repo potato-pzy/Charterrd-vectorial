@@ -48,7 +48,15 @@ const lightCards = [
       {
         type: 'overview',
         title: 'Client Overview',
-        content: 'Industry: Financial Services (Private Wealth Management)\nRegion: Japan\nFunction: Sales Enablement & IFA Support\nTimeline: 10 weeks (5 agile sprints)\n\nPWM Japan Securities, a leading Japanese Private Wealth Management institution, supports a large network of Investment Fund Advisors (IFAs). As advisory products, compliance rules, and operational tools expanded, the sales division faced increasing pressure to respond accurately and quickly to IFA queries, without compromising regulatory correctness.'
+        content: (
+          <>
+            <span className="text-white font-medium">Industry:</span> Financial Services (Private Wealth Management)<br />
+            <span className="text-white font-medium">Region:</span> Japan<br />
+            <span className="text-white font-medium">Function:</span> Sales Enablement & IFA Support<br />
+            <span className="text-white font-medium">Timeline:</span> 10 weeks (5 agile sprints)<br /><br />
+            PWM Japan Securities, a leading Japanese Private Wealth Management institution, supports a large network of Investment Fund Advisors (IFAs). As advisory products, compliance rules, and operational tools expanded, the sales division faced increasing pressure to respond accurately and quickly to IFA queries, without compromising regulatory correctness.
+          </>
+        )
       },
       {
         type: 'challenges',
@@ -79,8 +87,11 @@ const lightCards = [
       {
         type: 'solution',
         title: 'The Solution',
-        subtitle: 'AI-Powered Sales Copilot\n\nTeam Chartered Vectorial built an intelligent, chat-based assistant that gives sales teams instant, accurate answers to IFA operational and compliance questions, directly from approved documents.',
         subsections: [
+          {
+            heading: 'AI-Powered Sales Copilot',
+            content: 'Team Chartered Vectorial built an intelligent, chat-based assistant that gives sales teams instant, accurate answers to IFA operational and compliance questions, directly from approved documents.'
+          },
           {
             heading: 'Hybrid Retrieval Intelligence',
             content: 'Combines keyword, semantic, and vector search to surface the most relevant information, even for complex or ambiguous queries.'
@@ -133,7 +144,15 @@ const lightCards = [
       {
         type: 'overview',
         title: 'Client Overview',
-        content: 'Industry: Financial Services (Private Wealth Management)\nRegion: Japan\nChallenge: Regulatory Compliance Automation\nTimeline: < 12 weeks to ship (5 iterative sprints)\n\nPWM Japan Securities, a major Japanese financial services institution, required a modern approach to regulatory compliance for their Private Wealth Management division. With document volumes growing rapidly and stringent FSA (Financial Services Agency) requirements, the manual compliance process had become unsustainable.'
+        content: (
+          <>
+            <span className="text-white font-medium">Industry:</span> Financial Services (Private Wealth Management)<br />
+            <span className="text-white font-medium">Region:</span> Japan<br />
+            <span className="text-white font-medium">Challenge:</span> Regulatory Compliance Automation<br />
+            <span className="text-white font-medium">Timeline:</span> &lt; 12 weeks to ship (5 iterative sprints)<br /><br />
+            PWM Japan Securities, a major Japanese financial services institution, required a modern approach to regulatory compliance for their Private Wealth Management division. With document volumes growing rapidly and stringent FSA (Financial Services Agency) requirements, the manual compliance process had become unsustainable.
+          </>
+        )
       },
       {
         type: 'challenges',
@@ -217,7 +236,15 @@ const lightCards = [
       {
         type: 'overview',
         title: 'Client Overview',
-        content: 'Industry: Financial Services (Investment Products)\nHeadquarters: Dusseldorf, Germany, with offices globally\nChallenge: Legal Document Update Automation\nEngagement Type: Solution Design & Delivery (PatchBot)\n\nAs a manufacturer of investment products, Chartered Investment is required to create a subset of investment documentation for each newly issued product. That requires a dedicated strategy on how to deal with the creation of such documents thereby taking into consideration not only legal requirements, but also regulatory.'
+        content: (
+          <>
+            <span className="text-white font-medium">Industry:</span> Financial Services (Investment Products)<br />
+            <span className="text-white font-medium">Headquarters:</span> Dusseldorf, Germany, with offices globally<br />
+            <span className="text-white font-medium">Challenge:</span> Legal Document Update Automation<br />
+            <span className="text-white font-medium">Engagement Type:</span> Solution Design & Delivery (PatchBot)<br /><br />
+            As a manufacturer of investment products, Chartered Investment is required to create a subset of investment documentation for each newly issued product. That requires a dedicated strategy on how to deal with the creation of such documents thereby taking into consideration not only legal requirements, but also regulatory.
+          </>
+        )
       },
       {
         type: 'challenges',
@@ -428,7 +455,7 @@ function CaseCard({ image, label, title, content, sections, cardId, shouldAutoOp
                             <h4 className="text-white text-2xl font-medium mt-10 mb-6 first:mt-0">{section.title}</h4>
 
                             {section.subtitle && (
-                              <p className="text-gray-300 italic mb-6">{section.subtitle}</p>
+                              <p className="text-gray-300 mb-6">{section.subtitle}</p>
                             )}
 
                             {section.content && (
@@ -599,7 +626,6 @@ function AcceleratorsSection() {
                     </div>
                   </div>
 
-                  {/* Title and Description Swapper */}
                   <div className="acc-text-swap-container">
                     <h3 className="acc-title">{card.title}</h3>
                     <div className="acc-desc">
