@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Hero.css';
 import Navbar from './Navbar';
-import heroVideo from '../assets/Output_converted(3).MP4';
+import heroVideo from '../assets/Output_converted(3).mp4';
 
 function Hero() {
     return (
@@ -25,7 +25,7 @@ function Hero() {
                         Engineering Intelligence. Creating Value.
                     </h1>
                     <p className="hero-subtitle blauer-neue">
-                        AI-native. Embedded. Strategy to production.
+                        AI-native. Embedded. Strategy To Production.
                     </p>
                     <Link to="/contact">
                         <button className="btn-primary">
