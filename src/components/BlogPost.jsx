@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './BlogPost.css';
@@ -17,6 +17,8 @@ const BlogPost = ({
     prevPost = null,
     nextPost = null
 }) => {
+    const navigate = useNavigate();
+
     // Animation variants
     const fadeInUp = {
         initial: { opacity: 0, y: 20 },
@@ -31,6 +33,15 @@ const BlogPost = ({
     return (
         <div className="blog-post-page">
             <Navbar />
+
+            {/* Back Button */}
+            <button onClick={() => navigate(-1)} className="blog-back-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M12 19L5 12L12 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                Back
+            </button>
 
             <main>
                 {/* Blog Hero */}
@@ -108,6 +119,12 @@ const BlogPost = ({
                                 <p>
                                     To transition from simple automation to true agency, a system must exhibit three core characteristics: Reasoning, Tool-Use, and Autonomy within Guardrails.
                                 </p>
+
+                                <ul>
+                                    <li><strong>Reasoning:</strong> The ability to plan and adapt.</li>
+                                    <li><strong>Tool-Use:</strong> Interacting with other systems.</li>
+                                    <li><strong>Autonomy:</strong> Acting without constant hand-holding.</li>
+                                </ul>
 
                                 <blockquote>
                                     "The goal isn't to replace the human, but to provide the human with an army of experts who can handle the cognitive load of execution."
