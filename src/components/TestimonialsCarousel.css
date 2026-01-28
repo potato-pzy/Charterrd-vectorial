@@ -84,7 +84,7 @@
 
 .testimonial-client {
   font-family: "Stage Grotesk", sans-serif;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: var(--accent-green);
   margin: 0;
@@ -93,7 +93,7 @@
 
 .testimonial-solution {
   font-family: "Stage Grotesk", sans-serif;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.85);
   margin: 0;

@@ -51,7 +51,7 @@ const leftColumnStudies = [
                 title: 'The Solution',
                 subsections: [
                     {
-                        heading: 'AI-Powered Sales Copilot',
+                        heading: 'AI Powered Sales Copilot',
                         content: 'Team Chartered Vectorial built an intelligent, chat-based assistant that gives sales teams instant, accurate answers to IFA operational and compliance questions, directly from approved documents.'
                     },
                     {
@@ -146,15 +146,11 @@ const leftColumnStudies = [
                     },
                     {
                         heading: 'End-to-End Workflow',
-                        content: 'PatchBot manages the full lifecycle:\n\n• Document ingestion and parsing\n• Clause chunking and semantic mapping\n• Patch generation and review\n• Editable output with formatting preserved\n\nUsers review and apply changes through a web-based interface, enabling faster updates without disrupting existing workflows.'
+                        content: 'PatchBot manages the full lifecycle:<br />• Document ingestion and parsing<br />• Clause chunking and semantic mapping<br />• Patch generation and review<br />• Editable output with formatting preserved<br /><br />Users review and apply changes through a web-based interface, enabling faster updates without disrupting existing workflows.'
                     }
                 ]
             },
-            {
-                type: 'outcomes',
-                title: 'The Outcome',
-                content: 'PatchBot replaces high effort, manual document comparison with an AI-assisted, knowledge-driven patching workflow. The solution reduced update cycles from hours to minutes, improved consistency across documents, and provided a scalable foundation for managing complex legal documentation without the overhead of custom model training.'
-            },
+
             {
                 type: 'impacts',
                 title: 'Impacts/Results',
@@ -183,6 +179,11 @@ const leftColumnStudies = [
                         { layer: 'Doc Handling', tech1: 'Not Specified', tech2: 'python-docx, OnlyOffice' }
                     ]
                 }
+            },
+            {
+                type: 'outcomes',
+                title: 'The Outcome',
+                content: 'PatchBot replaces high effort, manual document comparison with an AI-assisted, knowledge-driven patching workflow. The solution reduced update cycles from hours to minutes, improved consistency across documents, and provided a scalable foundation for managing complex legal documentation without the overhead of custom model training.'
             }
         ]
     },
