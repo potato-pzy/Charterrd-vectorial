@@ -1,12 +1,13 @@
 import './CTASection.css';
 import { Link } from 'react-router-dom';
+import ctaBg from '../assets/cta-background.png';
 
 function CTASection({ title, subtitle, buttonText }) {
   return (
     <section className="cta-section">
       <div className="cta-background">
         <img
-          src="https://www.figma.com/api/mcp/asset/e910735e-1725-4c2f-885c-fd95b6e9cbbe"
+          src={ctaBg}
           alt="Background pattern"
           className="cta-bg-image"
         />

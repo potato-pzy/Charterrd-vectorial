@@ -30,6 +30,29 @@ const BlogPost = ({
         window.scrollTo(0, 0);
     }, []);
 
+    // Share handlers
+    const handleShareX = () => {
+        const url = window.location.href;
+        const text = `${title} - ${subtitle}`;
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+        window.open(twitterUrl, '_blank', 'noopener,noreferrer');
+    };
+
+    const handleShareLinkedIn = () => {
+        const url = window.location.href;
+        const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+        window.open(linkedInUrl, '_blank', 'noopener,noreferrer');
+    };
+
+    const handleCopyLink = async () => {
+        const url = window.location.href;
+        try {
+            await navigator.clipboard.writeText(url);
+        } catch (err) {
+            console.error('Failed to copy link:', err);
+        }
+    };
+
     return (
         <div className="blog-post-page">
             <Navbar />
@@ -98,9 +121,9 @@ const BlogPost = ({
 
                         <div className="share-links">
                             <p className="author-label">Share</p>
-                            <button className="share-btn">X</button>
-                            <button className="share-btn">LinkedIn</button>
-                            <button className="share-btn">Copy Link</button>
+                            <button className="share-btn" onClick={handleShareX}>X</button>
+                            <button className="share-btn" onClick={handleShareLinkedIn}>LinkedIn</button>
+                            <button className="share-btn" onClick={handleCopyLink}>Copy Link</button>
                         </div>
                     </aside>
 

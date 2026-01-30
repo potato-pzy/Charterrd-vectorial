@@ -13,6 +13,8 @@
   justify-content: center;
   min-height: 80vh;
   background-color: #020F14;
+  border: none;
+  border-bottom: none;
 }
 
 /* Background image layer */
@@ -27,6 +29,8 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border: none;
+  display: block;
 }
 
 /* Content container */

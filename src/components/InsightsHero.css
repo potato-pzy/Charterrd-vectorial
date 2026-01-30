@@ -49,6 +49,7 @@
   color: white;
   margin: 0 0 21px 0;
   line-height: normal;
+  text-transform: capitalize;
 }
 
 .insights-hero-subtitle {

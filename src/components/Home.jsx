@@ -17,7 +17,7 @@ function Home() {
         <BackgroundClipPath />
         <AboutSection />
         <ProductsSection />
-        <WhySection />
+        <WhySection variant="embedded" />
         <CaseStudiesSection />
         <TestimonialsSection />
         <CTASection />

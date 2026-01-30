@@ -38,7 +38,7 @@ function CareersSection() {
                         </div>
                     </div>
                     <div className="careers-scroll-to-explore">
-                        <span>Scroll to explore</span>
+
                     </div>
                 </section>
 

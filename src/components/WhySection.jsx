@@ -1,8 +1,6 @@
 import './WhySection.css';
 import whyBg from '../assets/why-cv-bg.svg';
-
-const figmaBg =
-  'https://www.figma.com/api/mcp/asset/3f8b45a2-37b6-4f1e-b183-dd707a5ccbac';
+import whySectionBg from '../assets/why-section-background.svg';
 
 const leftColumnCards = [
   {
@@ -75,7 +73,7 @@ function WhySection({ variant }) {
     <section className={sectionClass}>
       {variant === 'embedded' && (
         <div className="why-figma-bg-wrapper">
-          <img src={figmaBg} alt="" className="why-figma-bg" />
+          <img src={whySectionBg} alt="" className="why-figma-bg" />
         </div>
       )}
 

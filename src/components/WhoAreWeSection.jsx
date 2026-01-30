@@ -11,6 +11,7 @@ import layer1Image from '../assets/Layer 1.png';
 import weBuildImage from '../assets/we_build.jpeg';
 import weThinkImage from '../assets/we_think.jpeg';
 import weStayImage from '../assets/stay.jpeg';
+import ellipseImg from '../assets/whoarewe-ellipse.png';
 import founderPradeepImage from '../assets/founder_pradeep.jpg';
 import founderEyalImage from '../assets/founder_eyal.jpg';
 import founderCardBg from '../assets/founder_card_bg.svg';
@@ -125,8 +126,8 @@ function WhoAreWeSection() {
 
                     <div className="whoarewe-hero-inner">
                         <h1 className="whoarewe-hero-title">
-                            AI changes the <br className="whoarewe-hero-break" />
-                            equation in how value is created.
+                            AI CHANGES THE <br className="whoarewe-hero-break" />
+                            EQUATION IN HOW VALUE IS CREATED.
                         </h1>
 
                         <p className="whoarewe-hero-subtitle">
@@ -176,7 +177,7 @@ function WhoAreWeSection() {
                         <img
                             alt=""
                             className="whoarewe-ellipse-image"
-                            src="https://www.figma.com/api/mcp/asset/ae4f5952-1fdf-455a-ae26-6a4cc657bd55"
+                            src={ellipseImg}
                         />
                     </div>
                 </section>

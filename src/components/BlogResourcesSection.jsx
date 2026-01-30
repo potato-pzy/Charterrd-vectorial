@@ -1,19 +1,18 @@
 import { useState } from 'react';
 import './BlogResourcesSection.css';
-
-const imgWkC7AP1 = "https://www.figma.com/api/mcp/asset/054df4cf-ce71-49e2-b8e7-6cc47396df5e";
-const imgWkC7AP = "https://www.figma.com/api/mcp/asset/ddc1b181-39e0-43e0-a991-778d4960594f";
-const imgRectangle2 = "https://www.figma.com/api/mcp/asset/0cd619a2-6c25-46e2-9cb6-fb0fdbd03945";
-const imgScreenshot = "https://www.figma.com/api/mcp/asset/2e2f9270-c1d9-4149-ab4b-303cdeff20b9";
-const imgRectangle = "https://www.figma.com/api/mcp/asset/b340d30c-5211-456b-8ff7-fd5061efe766";
-const imgRectangle1 = "https://www.figma.com/api/mcp/asset/57eded5b-edbe-46db-b87b-8befe08c85ce";
+import teamBg1 from '../assets/team-bg-1.png';
+import teamBg2 from '../assets/team-bg-2.png';
+import blogRect1 from '../assets/blog-rectangle-1.png';
+import blogScreenshot from '../assets/blog-screenshot.png';
+import blogRect2 from '../assets/blog-rectangle-2.png';
+import blogRect3 from '../assets/blog-rectangle-3.png';
 
 // CMS-ready data structure - can be replaced with CMS data
 const defaultCategories = ['ALL', 'AI ENGINEERING', 'USECASES', 'FOUNDER\'S NOTES'];
 
 const defaultFeaturedPost = {
   id: 'featured-1',
-  image: imgWkC7AP1,
+  image: teamBg1,
   title: 'Why most AI pilots never reach production',
   date: 'JANUARY, 2026',
   slug: 'why-most-ai-pilots-never-reach-production',
@@ -43,7 +42,7 @@ const defaultArticles = [
     category: 'ENGINEERING',
     date: 'JANUARY, 2026',
     title: 'Automating compliance checks in regulated environments',
-    image: imgScreenshot,
+    image: blogScreenshot,
     slug: 'automating-compliance-checks-3',
     gradient: 'green',
   },

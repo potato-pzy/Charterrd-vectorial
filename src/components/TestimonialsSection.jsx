@@ -26,7 +26,7 @@ const testimonials = [
 ];
 
 function TestimonialsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1);
 
   const handleIndicatorClick = (index) => {
     setCurrentIndex(index);

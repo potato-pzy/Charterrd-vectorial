@@ -153,7 +153,7 @@ function WhatWeDo() {
         </div>
         <div className="hero-content-overlay">
           <div className="what-we-do-hero">
-            <h1 className="what-we-do-title">From strategy to production</h1>
+            <h1 className="what-we-do-title">FROM STRATEGY TO PRODUCTION</h1>
             <p className="what-we-do-subtitle">
               We embed with your team to validate where AI fits, build production-grade agents, and stay until adoption is complete.
             </p>

@@ -67,7 +67,7 @@
 /* Hero Content */
 .what-we-do-hero {
     text-align: center;
-    max-width: 900px;
+    max-width: 2500px;
     padding: 0 40px;
     pointer-events: auto;
 }
@@ -80,6 +80,7 @@
     margin: 0 0 24px 0;
     line-height: 1.2;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+    text-transform: capitalize;
 }
 
 .what-we-do-subtitle {

@@ -77,8 +77,8 @@
 /* Main hero title - scales with viewport, no white-space:nowrap to prevent overflow */
 .hero-title {
     font-family: "Stage Grotesk", sans-serif;
-    font-size: clamp(2.5rem, 5vw, 4.375rem);
-    /* Fluid typography: min 40px, scales, max 70px (reduced by 2px) */
+    font-size: clamp(2.5rem, 5vw, 3.375rem);
+    /* Fluid typography: min 40px, scales, max 54px */
     font-weight: 500;
     line-height: 1.2;
     margin-bottom: var(--spacing-md);
@@ -88,6 +88,7 @@
     letter-spacing: -0.02em;
     white-space: nowrap;
     text-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+    text-transform: capitalize;
 }
 
 .hero-subtitle {

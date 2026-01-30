@@ -6,10 +6,9 @@ import { AnimatePresence, motion } from 'framer-motion'
 import salesIcon from '../assets/sales-what.png'
 import docIcon from '../assets/doc-what.png'
 import complianceIcon from '../assets/compliance-what.png'
-
-const salesLine = 'https://www.figma.com/api/mcp/asset/08f7941b-9e4b-4a5b-979e-ba042f443c65'
-const docLine = 'https://www.figma.com/api/mcp/asset/f7335f67-86a5-4d14-8ea2-8c191d5287d6'
-const complianceLine = 'https://www.figma.com/api/mcp/asset/2eef0e0a-d4f1-4a0e-a244-dea793b7e265'
+import salesLine from '../assets/accelerator-sales-line.svg'
+import docLine from '../assets/accelerator-doc-line.svg'
+import complianceLine from '../assets/accelerator-compliance-line.svg'
 
 const darkCards = [
   {
@@ -41,7 +40,7 @@ const lightCards = [
     id: 3,
     image: caseStudyRight,
     label: 'Sales Copilot',
-    title: 'Intelligent Sales Copilot',
+    title: (<>Intelligent<br />Sales Copilot</>),
     company: 'PWM Japan Securities',
     content: 'Enabled advisors to deliver instant, citation-backed answers from complex policy documents, accelerating sales cycles significantly.',
     sections: [
@@ -137,7 +136,7 @@ const lightCards = [
     id: 2,
     image: caseStudyLeftTop,
     label: 'Compliance',
-    title: 'Intelligent Compliance',
+    title: (<>Intelligent<br />Compliance</>),
     company: 'PWM Japan Securities',
     content: 'Reduced regulatory compliance reviews from days to minutes using production-grade AI agents that understand complex financial regulations.',
     sections: [
@@ -479,7 +478,7 @@ function CaseCard({ image, label, title, content, sections, cardId, shouldAutoOp
 
                             {section.subsections && section.subsections.map((sub, subIdx) => (
                               <div key={subIdx} className="mb-6">
-                                <h5 className="text-white text-lg font-medium mb-2">{sub.heading}</h5>
+                                <h5 className="text-gray-300 text-lg font-medium mb-2">{sub.heading}</h5>
                                 <div className="text-gray-300 leading-relaxed">{sub.content}</div>
                               </div>
                             ))}
@@ -530,10 +529,6 @@ function CaseCard({ image, label, title, content, sections, cardId, shouldAutoOp
                     ) : (
                       <p className="text-xl leading-relaxed mb-8">{content}</p>
                     )}
-
-                    <div className="mt-12 pt-8 border-t border-white/10 flex items-center gap-4">
-                      <span className="text-sm text-gray-500 uppercase tracking-widest">Share this story</span>
-                    </div>
                   </motion.div>
                 </div>
               </div>

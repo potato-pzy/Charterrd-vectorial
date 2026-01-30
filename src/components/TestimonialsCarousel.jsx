@@ -3,7 +3,7 @@ import './TestimonialsCarousel.css';
 import { testimonials } from '../data/testimonials';
 
 function TestimonialsCarousel() {
-    const [activeIndex, setActiveIndex] = useState(0); // Updated to 0 since there are now only 2 cards
+    const [activeIndex, setActiveIndex] = useState(1); // Start with middle card centered
 
     const handleDotClick = (index) => {
         setActiveIndex(index);

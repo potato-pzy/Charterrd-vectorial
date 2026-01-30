@@ -22,7 +22,7 @@ function Hero() {
                 {/* Main Content */}
                 <div className="hero-main">
                     <h1 className="hero-title">
-                        Engineering Intelligence. Creating Value.
+                        ENGINEERING INTELLIGENCE. CREATING VALUE.
                     </h1>
                     <p className="hero-subtitle blauer-neue">
                         AI-native. Embedded. Strategy To Production.

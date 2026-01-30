@@ -161,8 +161,6 @@
 
 .footer-link-underline {
   position: relative;
-  text-decoration: underline;
-  text-underline-position: from-font;
   left: -45px;
 }
 

@@ -1,24 +1,24 @@
 import './BackgroundClipPath.css';
+import clipRect1 from '../assets/clippath-rect-1.png';
+import clipRect2 from '../assets/clippath-rect-2.png';
+import clipRect3 from '../assets/clippath-rect-3.png';
 
 function BackgroundClipPath() {
-    const imgRectangle2 = "https://www.figma.com/api/mcp/asset/30c3e3c7-3780-48bd-8bd7-a62b126345bb";
-    const imgRectangle = "https://www.figma.com/api/mcp/asset/a4757a03-025d-43f2-8328-1ba482802418";
-    const imgRectangle1 = "https://www.figma.com/api/mcp/asset/ba175ae4-3866-43af-875a-c962d525c314";
 
     return (
         <div className="clip-path-background">
             <div className="clip-path-group">
                 <div className="clip-path-group-inner">
                     <div className="clip-path-group-mask">
-                        <div 
+                        <div
                             className="clip-path-rectangle"
-                            style={{ 
-                                maskImage: `url('${imgRectangle}'), url('${imgRectangle1}')`,
-                                WebkitMaskImage: `url('${imgRectangle}'), url('${imgRectangle1}')`
+                            style={{
+                                maskImage: `url('${clipRect2}'), url('${clipRect3}')`,
+                                WebkitMaskImage: `url('${clipRect2}'), url('${clipRect3}')`
                             }}
                         >
                             <div className="clip-path-image-wrapper">
-                                <img alt="" className="clip-path-image" src={imgRectangle2} />
+                                <img alt="" className="clip-path-image" src={clipRect1} />
                             </div>
                         </div>
                     </div>
